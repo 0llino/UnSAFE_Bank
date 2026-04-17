@@ -25,7 +25,7 @@ COPY . .
 RUN yarn build
 
 # ---- Runtime stage ----
-FROM nginx:alpine
+FROM nginx:1.30.0-alpine
 
 RUN rm /etc/nginx/conf.d/default.conf
 COPY nginx/nginx.conf /etc/nginx/conf.d
